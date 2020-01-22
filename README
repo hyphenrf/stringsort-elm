@@ -1,0 +1,11 @@
+## Stringsort
+
+This is a single simple function that's missing from the 
+String module in the core lib.
+
+To use:
+	import String.Sort exposing (sort)
+	sort "Your String Here"
+
+and that should return:
+	"  HSYeeginorrrtu"

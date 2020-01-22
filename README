@@ -1,7 +1,7 @@
 ## Stringsort
 
-This is a single simple function that's missing from the 
-String module in the core lib.
+This is a single simple function that's missing from the String module in the
+core lib.
 
 To use:
 	import String.Sort exposing (sort)
@@ -9,3 +9,12 @@ To use:
 
 and that should return:
 	"  HSYeeginorrrtu"
+
+------------------------------------------------------------------------------
+> Why not just  (String -> List) |> List.sort |> (List -> String) ?
+
+That's a good question. I wrote this hoping it'd be faster since I don't have
+to convert to another type. I was wrong. It turned out to be 3x slower after I
+ran the benchmarks. Ironically. Do not actually use this code. It was more of
+a personal exercise. Maybe another exercise for another day is figuring out
+where it chokes and trying to optimize it..

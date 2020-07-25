@@ -18,3 +18,9 @@ to convert to another type. I was wrong. It turned out to be 3x slower after I
 ran the benchmarks. Ironically. Do not actually use this code. It was more of
 a personal exercise. Maybe another exercise for another day is figuring out
 where it chokes and trying to optimize it..
+------------------------------------------------------------------------------
+
+Update: of course it is ineffecient; this is a copy of haskell's demo which is
+admittedly elegant, but also very ineffecient. What makes quicksort 'quick' is
+the fact that it updates the array inplace. something that isn't practical with
+lists or the way data structures are handled in this implementation
